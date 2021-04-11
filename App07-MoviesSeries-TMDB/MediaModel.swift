@@ -23,15 +23,19 @@ class MediaModel: ObservableObject {
     
     func LoadGenres() {
         let URL = "https://api.themoviedb.org/3/genre/movie/list?api_key=\(apikey)&language=en-US"
-
+            
+        // Makes request with specified parameters to get genres data
             AF.request(URL, method: .get, encoding: URLEncoding.default, headers: HTTPHeaders(headers)).responseData { data in
-
+                // Decodes the data saved in the data variable gotten by the .responseData
                 let json = try! JSON(data: data.data!)
                 var genre: Genre
-                for g in json["results"] {
+                // Loops over array to get and save the data
+                for g in json["genres"] {
+                    // For each item a Genre object is created and the values given in the item are saved as object properties
                     genre = Genre(
                         id: g.1["id"].intValue,
                         name: g.1["name"].stringValue)
+                    // One this is done, the objetc is appended to the genre array
                     self.genres.append(genre)
                 }
             }
