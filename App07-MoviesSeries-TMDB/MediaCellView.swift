@@ -22,7 +22,7 @@ struct MediaCellView: View {
                                 ProgressView()
                             }
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .frame(width: geo.size.width-40)
                             .cornerRadius(40)
                             .overlay(
