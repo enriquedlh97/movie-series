@@ -25,13 +25,13 @@ struct SeriesView: View {
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                ForEach(media.series) { serie in
-                                    NavigationLink(
-                                        destination: MediaDetailView(media: serie),
-                                        label: {
+                                ForEach(media.seriesNow) { serie in
+//                                    NavigationLink(
+//                                        destination: MediaDetailView(media: serie),
+//                                        label: {
                                             MediaCellView(media: serie)
                                                 .frame(width: geo.size.width)
-                                        })
+//                                        })
                                 }
                             }
                             

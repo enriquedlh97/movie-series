@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct MediaCellView: View {
     
-    var media: Media
+    var media: Video
     
     var body: some View {
         GeometryReader { geo in
             VStack {
                 ZStack {
                     VStack {
-                        Image(media.images[0])
+                        KFImage(URL(string: media.poster_path)!)
+                            .placeholder {
+                                ProgressView()
+                            }
                             .resizable()
                             .scaledToFit()
                             .frame(width: geo.size.width-40)
@@ -28,7 +32,7 @@ struct MediaCellView: View {
                                     VStack {
                                         Spacer()
                                         HStack {
-                                            ScoreView(score: media.score)
+                                            ScoreView(score: media.vote_average * 10)
                                             Spacer()
                                         }
                                         .padding(.leading,40)
@@ -45,24 +49,14 @@ struct MediaCellView: View {
                     
                 }
                 VStack {
-                    HStack{
-                        Text(media.name)
+                        Text(media.title)
                             .font(.Akaya(size: 24))
-                        Text("(\(String(media.year)))")
-                            .font(.Akaya(size: 20))
-                        Text(media.duration)
+                        Text("(\(String(media.release_date)))")
                             .font(.Akaya(size: 20))
                         Spacer()
-                    }
-                    
-                    .padding(.top,40)
-                    HStack {
-                        Text(media.headline)
-                            .font(.Akaya(size: 20))
-                        Spacer()
-                    }
                 }
                 .foregroundColor(Color("SourLemon"))
+                padding(.top,40)
                 .padding(.leading,20)
 
             }
@@ -72,6 +66,6 @@ struct MediaCellView: View {
 
 struct MediaCellView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaCellView(media: Media.defaultMedia)
+        MediaCellView(media: Video.defaultVideo)
     }
 }

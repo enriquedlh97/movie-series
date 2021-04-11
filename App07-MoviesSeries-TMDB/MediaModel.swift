@@ -68,7 +68,7 @@ class MediaModel: ObservableObject {
         let URL = "https://api.themoviedb.org/3/tv/popular?api_key=\(apikey)&language=en-US&page=1"
         
         LoadSeries(URL: URL) { (returnedVideos) in
-            self.seriesNow.append(contentsOf: returnedVideos)
+            self.seriesPopular.append(contentsOf: returnedVideos)
         }
         
     }
@@ -79,7 +79,7 @@ class MediaModel: ObservableObject {
         let URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=\(apikey)&language=en-US&page=1"
         
         LoadSeries(URL: URL) { (returnedVideos) in
-            self.seriesNow.append(contentsOf: returnedVideos)
+            self.seriesTop.append(contentsOf: returnedVideos)
         }
         
     }
@@ -106,14 +106,14 @@ class MediaModel: ObservableObject {
                     title: series.1["name"].stringValue,
                     overview: series.1["overview"].stringValue,
                     genre_ids: series.1["genre_ids"].arrayObject as! [Int],
-                    poster_path: series.1["poster_path"].stringValue,
+                    poster_path: "\(posterPath)\(series.1["poster_path"].stringValue)",
                     release_date: series.1["first_air_date"].stringValue,
                     vote_average: series.1["vote_average"].doubleValue
                 )
                 // One this is done, the objetc is appended to the genre array
                 videos.append(video)
             }
-            print("Total \(videos.count)")
+            
             // This is to make sure that when excecution is done, the handler receives the data from the array
             handler(videos)
         }
@@ -175,7 +175,7 @@ class MediaModel: ObservableObject {
                     title: movie.1["title"].stringValue,
                     overview: movie.1["overview"].stringValue,
                     genre_ids: movie.1["genre_ids"].arrayObject as! [Int],
-                    poster_path: movie.1["poster_path"].stringValue,
+                    poster_path: "\(posterPath)\(movie.1["poster_path"].stringValue)",
                     release_date: movie.1["release_date"].stringValue,
                     vote_average: movie.1["vote_average"].doubleValue
                 )

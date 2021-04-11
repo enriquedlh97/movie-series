@@ -76,7 +76,6 @@
 		32D2859925F41B8800C6FA97 = {
 			isa = PBXGroup;
 			children = (
-				53C798C02623446F004FC3D4 /* Genre.swift */,
 				32D285A425F41B8800C6FA97 /* App07-MoviesSeries-TMDB */,
 				32D285A325F41B8800C6FA97 /* Products */,
 			);
@@ -95,6 +94,7 @@
 			children = (
 				32D285B925F41C4200C6FA97 /* Fonts */,
 				32D285A525F41B8800C6FA97 /* App04_MoviesSeriesApp.swift */,
+				53C798C02623446F004FC3D4 /* Genre.swift */,
 				32D285A725F41B8800C6FA97 /* MoviesSeriesView.swift */,
 				32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */,
 				32D285EF25F454DC00C6FA97 /* WebView.swift */,

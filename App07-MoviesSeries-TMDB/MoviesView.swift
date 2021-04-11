@@ -25,13 +25,13 @@ struct MoviesView: View {
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                ForEach(media.movies) { movie in
-                                    NavigationLink(
-                                        destination: MediaDetailView(media: movie),
-                                        label: {
+                                ForEach(media.moviesNow) { movie in
+//                                    NavigationLink(
+//                                        destination: MediaDetailView(media: movie),
+//                                        label: {
                                             MediaCellView(media: movie)
                                                 .frame(width: geo.size.width)
-                                        })
+//                                        })
                                 }
                             }
                             
