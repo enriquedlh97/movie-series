@@ -27,11 +27,11 @@ struct MoviesView: View {
                             VStack {
                                 Image(systemName: section.image)
                                     .font(.title)
+                                    .frame(height: 40)
                                 Text(section.name)
                                     .font(.Akaya(size: 18))
                             }
                             .foregroundColor(Color("SourLemon"))
-                            .frame(height: 48)
                         }
                     }
                     .padding(.vertical, 10)
