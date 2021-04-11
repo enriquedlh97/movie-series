@@ -29,6 +29,7 @@
 		53C798B626234129004FC3D4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 53C798B526234129004FC3D4 /* Alamofire */; };
 		53C798BA26234150004FC3D4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 53C798B926234150004FC3D4 /* SwiftyJSON */; };
 		53C798BE26234172004FC3D4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53C798BD26234172004FC3D4 /* Kingfisher */; };
+		53C798C12623446F004FC3D4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C798C02623446F004FC3D4 /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		32D285E925F4468100C6FA97 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailView.swift; sourceTree = "<group>"; };
 		32D285EF25F454DC00C6FA97 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		53C798C02623446F004FC3D4 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		32D2859925F41B8800C6FA97 = {
 			isa = PBXGroup;
 			children = (
+				53C798C02623446F004FC3D4 /* Genre.swift */,
 				32D285A425F41B8800C6FA97 /* App07-MoviesSeries-TMDB */,
 				32D285A325F41B8800C6FA97 /* Products */,
 			);
@@ -219,6 +222,7 @@
 				32D285CA25F420ED00C6FA97 /* MediaModel.swift in Sources */,
 				32D285ED25F44E2800C6FA97 /* MediaDetailView.swift in Sources */,
 				32D285A625F41B8800C6FA97 /* App04_MoviesSeriesApp.swift in Sources */,
+				53C798C12623446F004FC3D4 /* Genre.swift in Sources */,
 				32D285E425F43D9600C6FA97 /* MediaCellView.swift in Sources */,
 				32D285C425F41FDF00C6FA97 /* Media.swift in Sources */,
 				32D285E725F43DC900C6FA97 /* Extensions.swift in Sources */,
