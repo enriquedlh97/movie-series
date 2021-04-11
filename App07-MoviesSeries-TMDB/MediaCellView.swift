@@ -56,7 +56,7 @@ struct MediaCellView: View {
                         Spacer()
                 }
                 .foregroundColor(Color("SourLemon"))
-                padding(.top,40)
+                .padding(.top,40)
                 .padding(.leading,20)
 
             }
