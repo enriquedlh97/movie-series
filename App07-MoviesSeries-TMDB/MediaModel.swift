@@ -20,6 +20,8 @@ class MediaModel: ObservableObject {
     @Published var seriesNow = [Video]()
     @Published var seriesPopular = [Video]()
     @Published var seriesTop = [Video]()
+    @Published var moviesList = [Video]()
+    @Published var seriesList = [Video]()
     
     
     
@@ -58,6 +60,7 @@ class MediaModel: ObservableObject {
         
         LoadSeries(URL: URL) { (returnedVideos) in
             self.seriesNow.append(contentsOf: returnedVideos)
+            self.seriesList.append(contentsOf: returnedVideos)
         }
         
     }
@@ -127,6 +130,7 @@ class MediaModel: ObservableObject {
         
         LoadMovies(URL: URL) { (returnedVideos) in
             self.moviesNow.append(contentsOf: returnedVideos)
+            self.moviesList.append(contentsOf: returnedVideos)
         }
         
     }

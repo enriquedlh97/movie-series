@@ -43,7 +43,7 @@ struct MoviesView: View {
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                ForEach(media.moviesNow) { movie in
+                                ForEach(media.moviesList) { movie in
 //                                    NavigationLink(
 //                                        destination: MediaDetailView(media: movie),
 //                                        label: {
@@ -61,6 +61,19 @@ struct MoviesView: View {
             }
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
+        }
+    }
+    
+    func LoadMovies(list: Int) -> [Video] {
+        switch list {
+        case 0:
+            return media.moviesNow
+        case 1:
+            return media.moviesPopular
+        case 2:
+            return media.moviesTop
+        default:
+            return media.moviesNow
         }
     }
 }
