@@ -20,8 +20,8 @@ extension Section {
     
     public static let sections: [Section] = [
         Section(id: 0, name: "Now Playing", image: "ticket.fill", imageUnselected: "ticket"),
-        Section(id: 0, name: "Popular", image: "star.fill", imageUnselected: "star"),
-        Section(id: 0, name: "Top Rated", image: "crown.fill", imageUnselected: "crown")
+        Section(id: 1, name: "Popular", image: "star.fill", imageUnselected: "star"),
+        Section(id: 2, name: "Top Rated", image: "crown.fill", imageUnselected: "crown")
     ]
     
 }

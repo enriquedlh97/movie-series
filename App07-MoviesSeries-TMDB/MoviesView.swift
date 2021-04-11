@@ -10,6 +10,7 @@ import SwiftUI
 struct MoviesView: View {
     
     @StateObject var media: MediaModel
+    @State var index: Int = 0
     
     var body: some View {
         GeometryReader { geo in
@@ -24,14 +25,19 @@ struct MoviesView: View {
                     }
                     HStack(spacing: 30) {
                         ForEach(Section.sections) { section in
-                            VStack {
-                                Image(systemName: section.image)
-                                    .font(.title)
-                                    .frame(height: 40)
-                                Text(section.name)
-                                    .font(.Akaya(size: 18))
-                            }
-                            .foregroundColor(Color("SourLemon"))
+                            Button(action: {
+                                index = section.id
+                                print("Selection: \(index)")
+                            }, label: {
+                                VStack {
+                                    Image(systemName: section.image)
+                                        .font(.title)
+                                        .frame(height: 40)
+                                    Text(section.name)
+                                        .font(.Akaya(size: 18))
+                                }
+                                .foregroundColor(Color("SourLemon"))
+                            })
                         }
                     }
                     .padding(.vertical, 10)
