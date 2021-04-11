@@ -16,6 +16,7 @@ class MediaModel: ObservableObject {
     @Published var genres = [Genre]()
     
     
+    
     init() {
         LoadInfo()
         LoadGenres()

@@ -30,6 +30,7 @@
 		53C798BA26234150004FC3D4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 53C798B926234150004FC3D4 /* SwiftyJSON */; };
 		53C798BE26234172004FC3D4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 53C798BD26234172004FC3D4 /* Kingfisher */; };
 		53C798C12623446F004FC3D4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C798C02623446F004FC3D4 /* Genre.swift */; };
+		53C798C426234BB2004FC3D4 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C798C326234BB2004FC3D4 /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailView.swift; sourceTree = "<group>"; };
 		32D285EF25F454DC00C6FA97 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		53C798C02623446F004FC3D4 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		53C798C326234BB2004FC3D4 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				32D285C025F41F7C00C6FA97 /* NavigationBarModifier.swift */,
 				32D285C325F41FDF00C6FA97 /* Media.swift */,
 				32D285C925F420ED00C6FA97 /* MediaModel.swift */,
+				53C798C326234BB2004FC3D4 /* Video.swift */,
 				32D285C625F4202900C6FA97 /* Enumerators.swift */,
 				32D285B625F41BEC00C6FA97 /* Colors.xcassets */,
 				32D285A925F41B8900C6FA97 /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 				32D285E425F43D9600C6FA97 /* MediaCellView.swift in Sources */,
 				32D285C425F41FDF00C6FA97 /* Media.swift in Sources */,
 				32D285E725F43DC900C6FA97 /* Extensions.swift in Sources */,
+				53C798C426234BB2004FC3D4 /* Video.swift in Sources */,
 				32D285C725F4202900C6FA97 /* Enumerators.swift in Sources */,
 				32D285F025F454DD00C6FA97 /* WebView.swift in Sources */,
 			);
