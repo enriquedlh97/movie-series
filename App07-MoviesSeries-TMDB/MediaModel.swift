@@ -22,26 +22,23 @@ class MediaModel: ObservableObject {
     @Published var seriesTop = [Video]()
     
     
-    // Series Now
-    let URL = "https://api.themoviedb.org/3/tv/on_the_air?api_key=\(apikey)&language=en-US&page=1"
     
-    // Series Top
-    let URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=\(apikey)&language=en-US&page=1"
     
-    // Series Popular
-    let URL = "https://api.themoviedb.org/3/tv/popular?api_key=\(apikey)&language=en-US&page=1"
+    
+    
+    
     
     // Movies Images
-    let URL = "https://api.themoviedb.org/3/movie/\(id)/images?api_key=\(apikey)"
+    //let URL = "https://api.themoviedb.org/3/movie/\(id)/images?api_key=\(apikey)"
     
     // Series Images
-    let URL = "https://api.themoviedb.org/3/tv/\(id)/images?api_key=\(apikey)"
+    //let URL = "https://api.themoviedb.org/3/tv/\(id)/images?api_key=\(apikey)"
     
     // Movies Trailers
-    let URL = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=\(apikey)&language=en-US"
+    //let URL = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=\(apikey)&language=en-US"
     
     // Series Trailers
-    let URL = "https://api.themoviedb.org/3/tv/\(id)/videos?api_key=\(apikey)&language=en-US"
+    //let URL = "https://api.themoviedb.org/3/tv/\(id)/videos?api_key=\(apikey)&language=en-US"
     
     init() {
         LoadInfo()
@@ -52,6 +49,75 @@ class MediaModel: ObservableObject {
         LoadSeriesNow()
         LoadSeriesPopular()
         LoadSeriesTop()
+    }
+    
+    func LoadSeriesNow() {
+        
+        // Series Now
+        let URL = "https://api.themoviedb.org/3/tv/on_the_air?api_key=\(apikey)&language=en-US&page=1"
+        
+        LoadSeries(URL: URL) { (returnedVideos) in
+            self.seriesNow.append(contentsOf: returnedVideos)
+        }
+        
+    }
+    
+    func LoadSeriesPopular() {
+        
+        // Series Popular
+        let URL = "https://api.themoviedb.org/3/tv/popular?api_key=\(apikey)&language=en-US&page=1"
+        
+        LoadSeries(URL: URL) { (returnedVideos) in
+            self.seriesNow.append(contentsOf: returnedVideos)
+        }
+        
+    }
+    
+    func LoadSeriesTop() {
+        
+        // Series Top
+        let URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=\(apikey)&language=en-US&page=1"
+        
+        LoadSeries(URL: URL) { (returnedVideos) in
+            self.seriesNow.append(contentsOf: returnedVideos)
+        }
+        
+    }
+    
+    // Is called by Series Now, Top and Popular for ...
+    func LoadSeries(URL: String, handler: @escaping (_ result: [Video]) -> ()) {
+        // The escaping closure is used to indicte that the result is gotten after the function
+        // finishes excecuting. This forces it so be synchronous.
+        // Once it finishes it returns an array with the Video objects containing the dtaa for the movies
+        
+        // Initializes empty array
+        var videos = [Video]()
+        
+        // Makes request with specified parameters to get movies and data
+        AF.request(URL, method: .get, encoding: URLEncoding.default, headers: HTTPHeaders(headers)).responseData { data in
+            // Decodes the data saved in the data variable gotten by the .responseData
+            let json = try! JSON(data: data.data!)
+            var video: Video
+            // Loops over array to get and save the data
+            for series in json["results"] {
+                // For each item a Genre object is created and the values given in the item are saved as object properties
+                video = Video(
+                    id: series.1["id"].intValue,
+                    title: series.1["name"].stringValue,
+                    overview: series.1["overview"].stringValue,
+                    genre_ids: series.1["genre_ids"].arrayObject as! [Int],
+                    poster_path: series.1["poster_path"].stringValue,
+                    release_date: series.1["first_air_date"].stringValue,
+                    vote_average: series.1["vote_average"].doubleValue
+                )
+                // One this is done, the objetc is appended to the genre array
+                videos.append(video)
+            }
+            print("Total \(videos.count)")
+            // This is to make sure that when excecution is done, the handler receives the data from the array
+            handler(videos)
+        }
+        
     }
     
     func LoadMoviesNow() {
