@@ -23,7 +23,7 @@ struct MediaCellView: View {
                             }
                             .resizable()
                             .scaledToFill()
-                            .frame(width: geo.size.width-40)
+                            .frame(width: geo.size.width-40, height: geo.size.height-120)
                             .cornerRadius(40)
                             .overlay(
                                 ZStack {

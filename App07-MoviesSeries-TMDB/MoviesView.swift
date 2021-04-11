@@ -22,6 +22,19 @@ struct MoviesView: View {
                             .foregroundColor(Color("SourLemon"))
                             .padding(.top,40)
                     }
+                    HStack(spacing: 30) {
+                        ForEach(Section.sections) { section in
+                            VStack {
+                                Image(systemName: section.image)
+                                    .font(.title)
+                                Text(section.name)
+                                    .font(.Akaya(size: 18))
+                            }
+                            .foregroundColor(Color("SourLemon"))
+                            .frame(height: 48)
+                        }
+                    }
+                    .padding(.vertical, 10)
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
