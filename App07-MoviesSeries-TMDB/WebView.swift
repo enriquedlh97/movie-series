@@ -2,7 +2,7 @@
 //  WebView.swift
 //  App04-MoviesSeries
 //
-//  Created by David Cantú Delgado on 06/03/21.
+//  Created by Enrique Diaz de Leon Hicks on 06/03/21.
 //
 
 import SwiftUI
