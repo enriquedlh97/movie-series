@@ -27,6 +27,8 @@ struct MoviesView: View {
                         ForEach(Section.sections) { section in
                             Button(action: {
                                 indexSelected = section.id
+                                media.moviesList.removeAll()
+                                media.moviesList.append(contentsOf: LoadMovies(list: indexSelected))
                             }, label: {
                                 VStack {
                                     Image(systemName: section.id == indexSelected ? section.image : section.imageUnselected)
