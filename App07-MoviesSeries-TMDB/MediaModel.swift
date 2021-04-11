@@ -6,15 +6,35 @@
 //
 
 import SwiftUI
+import SwiftyJSON
+import Alamofire
 
 class MediaModel: ObservableObject {
     
     @Published var movies = [Media]()
     @Published var series = [Media]()
+    @Published var genres = [Genre]()
     
     
     init() {
         LoadInfo()
+        LoadGenres()
+    }
+    
+    func LoadGenres() {
+        let URL = "https://api.themoviedb.org/3/genre/movie/list?api_key=\(apikey)&language=en-US"
+
+            AF.request(URL, method: .get, encoding: URLEncoding.default, headers: HTTPHeaders(headers)).responseData { data in
+
+                let json = try! JSON(data: data.data!)
+                var genre: Genre
+                for g in json["results"] {
+                    genre = Genre(
+                        id: g.1["id"].intValue,
+                        name: g.1["name"].stringValue)
+                    self.genres.append(genre)
+                }
+            }
     }
     
     func LoadInfo() {
