@@ -23,7 +23,6 @@ struct SeriesView: View {
                             .foregroundColor(Color("Alizarin"))
                             .padding(.top,40)
                     }
-  //****************************************************************
                     HStack(spacing: 30) {
                         ForEach(Section.sections) { section in
                             Button(action: {
@@ -42,10 +41,9 @@ struct SeriesView: View {
                             })
                         }
                     }
-                    .padding(.vertical, 10)
+                    .padding(.bottom, 10)
 
   
-  //*****************************************************************
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {

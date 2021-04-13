@@ -41,7 +41,7 @@ struct MoviesView: View {
                             })
                         }
                     }
-                    .padding(.vertical, 10)
+                    .padding(.bottom, 10)
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
