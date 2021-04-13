@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MediaDetailView: View {
     
-    var media: Media
+    var videos: MediaModel
+    var media: Video
     
     var body: some View {
         GeometryReader { geo in
@@ -22,22 +23,27 @@ struct MediaDetailView: View {
                             .multilineTextAlignment(.center)
                             .padding(.horizontal,20)
                             .padding(.top,6)
-                        Text(media.genre)
-                            .font(.Akaya(size: 20))
-                            .foregroundColor(Color("BelizeHole"))
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal,20)
-                            .padding(.top,10)
-                        NavigationLink(
-                            destination: WebView(html: media.trailer),
-                            label: {
-                                Label("Trailer", systemImage: "play.tv.fill")
+                        HStack(spacing: 4) {
+                            ForEach(media.genre_ids, id: \.self) { id in
+                            if let index = videos.genres.firstIndex(where: { $0.id == id }) {
+                                Text(videos.genres[index].name)
                                     .font(.Akaya(size: 20))
                                     .foregroundColor(Color("BelizeHole"))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal,20)
-                                    .padding(.top,10)
-                            })
+                            }
+                        }
+                        }
+                        .padding(.horizontal,20)
+                        .padding(.top,10)
+//                        NavigationLink(
+//                            destination: WebView(html: media.trailer),
+//                            label: {
+//                                Label("Trailer", systemImage: "play.tv.fill")
+//                                    .font(.Akaya(size: 20))
+//                                    .foregroundColor(Color("BelizeHole"))
+//                                    .multilineTextAlignment(.center)
+//                                    .padding(.horizontal,20)
+//                                    .padding(.top,10)
+//                            })
                     }
                     VStack {
                         TabView {
