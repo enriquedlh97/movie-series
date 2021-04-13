@@ -30,9 +30,7 @@ class MediaModel: ObservableObject {
     
     
     
-    // Movies Images
-    //let URL = "https://api.themoviedb.org/3/movie/\(id)/images?api_key=\(apikey)"
-    
+        
     // Series Images
     //let URL = "https://api.themoviedb.org/3/tv/\(id)/images?api_key=\(apikey)"
     
@@ -191,6 +189,31 @@ class MediaModel: ObservableObject {
             handler(videos)
         }
         
+    }
+    
+    func LoadMoviesImage(id: Int, handler: @escaping (_ result: [Video]) -> ()) {
+        
+        // Movies Images
+        let URL = "https://api.themoviedb.org/3/movie/\(id)/images?api_key=\(apikey)"
+
+        
+        var posters = [Poster]()
+        
+        // Makes request with specified parameters to get genres data
+        AF.request(URL, method: .get, encoding: URLEncoding.default, headers: HTTPHeaders(headers)).responseData { data in
+            // Decodes the data saved in the data variable gotten by the .responseData
+            let json = try! JSON(data: data.data!)
+            var poster: Poster
+            // Loops over array to get and save the data
+            for p in json["posters"] {
+                poster = Poster(
+                    file_path: p.1["file_path"].stringValue,
+                    height: p.1["height"].intValue,
+                    width: p.1["width"].intValue,
+                    vote_average: p.1["vote_average"].doubleValue)
+                posters.append(poster)
+            }
+            var sortedPosters = posters.sorted { $0.vote_average > $1.vote_average }
     }
     
     func LoadGenres() {
