@@ -99,6 +99,6 @@ struct MediaDetailView: View {
 
 struct MediaDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaDetailView(videos: MediaModel(), media: Video.defaultVideo)
+        MediaDetailView(videos: MediaModel(), media: Video.defaultVideo, isMovie: true)
     }
 }
