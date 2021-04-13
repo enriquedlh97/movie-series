@@ -31,8 +31,7 @@ class MediaModel: ObservableObject {
     
     
         
-    // Series Images
-    //let URL = "https://api.themoviedb.org/3/tv/\(id)/images?api_key=\(apikey)"
+    
     
     // Movies Trailers
     //let URL = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=\(apikey)&language=en-US"
@@ -191,10 +190,14 @@ class MediaModel: ObservableObject {
         
     }
     
-    func LoadMoviesImage(id: Int, handler: @escaping (_ result: [Poster]) -> ()) {
-        
+    func LoadImages(id: Int, isMovie: Bool, handler: @escaping (_ result: [Poster]) -> ()) {
+        if isMovie {
+            let type = "movie"
+        } else {
+            let type = "tv"
+        }
         // Movies Images
-        let URL = "https://api.themoviedb.org/3/movie/\(id)/images?api_key=\(apikey)"
+        let URL = "https://api.themoviedb.org/3/\(type)/\(id)/images?api_key=\(apikey)"
 
         
         var posters = [Poster]()
@@ -218,6 +221,7 @@ class MediaModel: ObservableObject {
             handler(sortedPosters)
         }
     }
+    
     
     func LoadGenres() {
         let URL = "https://api.themoviedb.org/3/genre/movie/list?api_key=\(apikey)&language=en-US"
