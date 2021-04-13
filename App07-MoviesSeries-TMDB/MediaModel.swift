@@ -191,13 +191,16 @@ class MediaModel: ObservableObject {
     }
     
     func LoadImages(id: Int, isMovie: Bool, handler: @escaping (_ result: [Poster]) -> ()) {
+        
+        var mediaType: String
+        
         if isMovie {
-            let type = "movie"
+            mediaType = "movie"
         } else {
-            let type = "tv"
+            mediaType = "tv"
         }
         // Movies Images
-        let URL = "https://api.themoviedb.org/3/\(type)/\(id)/images?api_key=\(apikey)"
+        let URL = "https://api.themoviedb.org/3/\(mediaType)/\(id)/images?api_key=\(apikey)"
 
         
         var posters = [Poster]()
