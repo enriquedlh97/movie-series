@@ -18,7 +18,7 @@ struct SeriesView: View {
                 Color("GreenSea")
                 VStack {
                     VStack {
-                        Text("Movies")
+                        Text("Series")
                             .font(.Akaya(size: 48))
                             .foregroundColor(Color("Alizarin"))
                             .padding(.top,40)

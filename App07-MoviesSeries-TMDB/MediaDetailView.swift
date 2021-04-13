@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct MediaDetailView: View {
     
     var videos: MediaModel
     var media: Video
+    @State var posters = [Poster]()
     
     var body: some View {
         GeometryReader { geo in
@@ -46,9 +48,14 @@ struct MediaDetailView: View {
 //                            })
                     }
                     VStack {
-                        TabView {
-                            ForEach(media.images, id:\.self) { image in
-                                Image(image)
+                        if posters.count > 0 {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack {
+                                ForEach(posters) { poster in
+                                KFImage(URL(string: poster.file_path)!)
+                                    .placeholder {
+                                        ProgressView()
+                                    }
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: geo.size.width-40)
@@ -64,18 +71,23 @@ struct MediaDetailView: View {
                                     .padding(.vertical,10)
 
                             }
-                        }
-                        .tabViewStyle(PageTabViewStyle())
-                        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                                }
+                            }
                     }
                 }
+                }
             }
-            .navigationBarTitle(media.name, displayMode: .inline)
+            .onAppear {
+                videos.LoadMoviesImage(id: media.id) { (returnedPosters) in
+                    posters.append(contentsOf: returnedPosters)
+                }
+            }
+            .navigationBarTitle(media.title, displayMode: .inline)
             .navigationBarColor(UIColor(named: "BelizeHole"))
             .toolbar {
                 // Es para poner el título
                 ToolbarItem(placement: .principal) {
-                    Text(media.name)
+                    Text(media.title)
                         .font(.Akaya(size: 24))
                         .foregroundColor(Color("Alizarin"))
                 }
@@ -86,6 +98,6 @@ struct MediaDetailView: View {
 
 struct MediaDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaDetailView(media: Media.defaultMedia)
+        MediaDetailView(videos: MediaModel(), media: Video.defaultVideo)
     }
 }

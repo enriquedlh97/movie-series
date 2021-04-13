@@ -191,7 +191,7 @@ class MediaModel: ObservableObject {
         
     }
     
-    func LoadMoviesImage(id: Int, handler: @escaping (_ result: [Video]) -> ()) {
+    func LoadMoviesImage(id: Int, handler: @escaping (_ result: [Poster]) -> ()) {
         
         // Movies Images
         let URL = "https://api.themoviedb.org/3/movie/\(id)/images?api_key=\(apikey)"
@@ -207,13 +207,16 @@ class MediaModel: ObservableObject {
             // Loops over array to get and save the data
             for p in json["posters"] {
                 poster = Poster(
-                    file_path: p.1["file_path"].stringValue,
+                    file_path: "\(posterPath)\(p.1["file_path"].stringValue)",
                     height: p.1["height"].intValue,
                     width: p.1["width"].intValue,
                     vote_average: p.1["vote_average"].doubleValue)
                 posters.append(poster)
             }
-            var sortedPosters = posters.sorted { $0.vote_average > $1.vote_average }
+            var sortedPosters = Array((posters.sorted { $0.vote_average > $1.vote_average }).prefix(5))
+            
+            handler(sortedPosters)
+        }
     }
     
     func LoadGenres() {
