@@ -47,7 +47,7 @@ struct MoviesView: View {
                             HStack {
                                 ForEach(media.moviesList) { movie in
                                     NavigationLink(
-                                        destination: MediaDetailView(videos: media, media: movie),
+                                        destination: MediaDetailView(videos: media, media: movie, isMovie: true),
                                         label: {
                                             MediaCellView(media: movie)
                                                 .frame(width: geo.size.width)

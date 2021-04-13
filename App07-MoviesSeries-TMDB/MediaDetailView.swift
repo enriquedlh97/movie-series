@@ -12,6 +12,7 @@ struct MediaDetailView: View {
     
     var videos: MediaModel
     var media: Video
+    var isMovie: Bool
     @State var posters = [Poster]()
     
     var body: some View {
@@ -78,7 +79,7 @@ struct MediaDetailView: View {
                 }
             }
             .onAppear {
-                videos.LoadMoviesImage(id: media.id) { (returnedPosters) in
+                videos.LoadImages(id: media.id, isMovie: isMovie) { (returnedPosters) in
                     posters.append(contentsOf: returnedPosters)
                 }
             }
