@@ -34,6 +34,7 @@
 		53C798C12623446F004FC3D4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C798C02623446F004FC3D4 /* Genre.swift */; };
 		53C798C426234BB2004FC3D4 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C798C326234BB2004FC3D4 /* Video.swift */; };
 		53CE6E9526279C90000771C7 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE6E9426279C90000771C7 /* Trailer.swift */; };
+		53CE6E9826279F94000771C7 /* TrailerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CE6E9726279F94000771C7 /* TrailerListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		53C798C02623446F004FC3D4 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		53C798C326234BB2004FC3D4 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		53CE6E9426279C90000771C7 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
+		53CE6E9726279F94000771C7 /* TrailerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				32D285C025F41F7C00C6FA97 /* NavigationBarModifier.swift */,
 				32D285C325F41FDF00C6FA97 /* Media.swift */,
 				32D285C925F420ED00C6FA97 /* MediaModel.swift */,
+				53CE6E9726279F94000771C7 /* TrailerListView.swift */,
 				53CE6E9426279C90000771C7 /* Trailer.swift */,
 				53BF0A0026252F060046EC42 /* Poster.swift */,
 				53C798C326234BB2004FC3D4 /* Video.swift */,
@@ -243,6 +246,7 @@
 				53BF0A0126252F060046EC42 /* Poster.swift in Sources */,
 				53C798C426234BB2004FC3D4 /* Video.swift in Sources */,
 				32D285C725F4202900C6FA97 /* Enumerators.swift in Sources */,
+				53CE6E9826279F94000771C7 /* TrailerListView.swift in Sources */,
 				32D285F025F454DD00C6FA97 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
