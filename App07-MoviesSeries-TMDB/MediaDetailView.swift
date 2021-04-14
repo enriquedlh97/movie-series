@@ -37,16 +37,16 @@ struct MediaDetailView: View {
                         }
                         .padding(.horizontal,20)
                         .padding(.top,10)
-//                        NavigationLink(
-//                            destination: WebView(html: media.trailer),
-//                            label: {
-//                                Label("Trailer", systemImage: "play.tv.fill")
-//                                    .font(.Akaya(size: 20))
-//                                    .foregroundColor(Color("BelizeHole"))
-//                                    .multilineTextAlignment(.center)
-//                                    .padding(.horizontal,20)
-//                                    .padding(.top,10)
-//                            })
+                        NavigationLink(
+                            destination: TrailerListView(videos: videos, media: media, isMovie: isMovie),
+                            label: {
+                                Label("Trailer", systemImage: "play.tv.fill")
+                                    .font(.Akaya(size: 20))
+                                    .foregroundColor(Color("BelizeHole"))
+                                    .multilineTextAlignment(.center)
+                                    .padding(.horizontal,20)
+                                    .padding(.top,10)
+                            })
                     }
                     VStack {
                         if posters.count > 0 {
