@@ -45,6 +45,7 @@ struct SeriesView: View {
 
   
                     VStack {
+                        if media.seriesList.count > 0 {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(media.seriesList) { serie in
@@ -57,6 +58,9 @@ struct SeriesView: View {
                                 }
                             }
                             
+                        }
+                        } else {
+                            Spacer()
                         }
                     }
                     .padding(.top,-6)

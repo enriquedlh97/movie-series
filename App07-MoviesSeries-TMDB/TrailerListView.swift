@@ -50,6 +50,6 @@ struct TrailerListView: View {
 
 struct TrailerListView_Previews: PreviewProvider {
     static var previews: some View {
-        TrailerListView(videos: <#MediaModel#>, media: <#Video#>, isMovie: <#Bool#>)
+        TrailerListView(videos: MediaModel(), media: Video.defaultVideo, isMovie: true)
     }
 }

@@ -43,6 +43,7 @@ struct MoviesView: View {
                     }
                     .padding(.bottom, 10)
                     VStack {
+                        if media.moviesList.count > 0 {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(media.moviesList) { movie in
@@ -55,6 +56,9 @@ struct MoviesView: View {
                                 }
                             }
                             
+                        }
+                        } else {
+                            Spacer()
                         }
                     }
                     .padding(.top,-6)
