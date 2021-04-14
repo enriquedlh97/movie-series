@@ -23,22 +23,6 @@ class MediaModel: ObservableObject {
     @Published var moviesList = [Video]()
     @Published var seriesList = [Video]()
     
-    
-    
-    
-    
-    
-    
-    
-        
-    
-    
-    // Movies Trailers
-    //let URL = "https://api.themoviedb.org/3/movie/\(id)/videos?api_key=\(apikey)&language=en-US"
-    
-    // Series Trailers
-    //let URL = "https://api.themoviedb.org/3/tv/\(id)/videos?api_key=\(apikey)&language=en-US"
-    
     init() {
         LoadInfo()
         LoadGenres()
@@ -188,6 +172,44 @@ class MediaModel: ObservableObject {
             handler(videos)
         }
         
+    }
+    
+    func LoadVideos(id: Int, isMovie: Bool, handler: @escaping (_ result: [Trailer]) -> ()) {
+        
+        var mediaType: String
+        
+        if isMovie {
+            mediaType = "movie"
+        } else {
+            mediaType = "tv"
+        }
+        // Movies Trailers
+        let URL = "https://api.themoviedb.org/3/\(mediaType)/\(id)/videos?api_key=\(apikey)&language=en-US"
+
+        
+        var trailers = [Trailer]()
+        
+        // Makes request with specified parameters to get genres data
+        AF.request(URL, method: .get, encoding: URLEncoding.default, headers: HTTPHeaders(headers)).responseData { data in
+            // Decodes the data saved in the data variable gotten by the .responseData
+            let json = try! JSON(data: data.data!)
+            var trailer: Trailer
+            // Loops over array to get and save the data
+            for t in json["results"] {
+                trailer = Trailer(
+                    id: t.1["id"].stringValue,
+                    name: t.1["name"].stringValue,
+                    key: t.1["key"].stringValue,
+                    type: t.1["type"].stringValue,
+                    site: t.1["site"].stringValue,
+                    url: "https://youtu.be/\(t.1["key"].stringValue)")
+                    
+                trailers.append(trailer)
+            }
+            var filteredTrailers =  trailers.filter( { %0.site == "YouTube" } )
+            
+            handler(filteredTrailers)
+        }
     }
     
     func LoadImages(id: Int, isMovie: Bool, handler: @escaping (_ result: [Poster]) -> ()) {

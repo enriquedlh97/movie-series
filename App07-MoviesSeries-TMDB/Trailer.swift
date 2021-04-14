@@ -14,5 +14,6 @@ struct Trailer: Identifiable {
     var key: String
     var type: String
     var site: String
+    var url: String
     
 }
