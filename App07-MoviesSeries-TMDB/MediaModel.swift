@@ -206,7 +206,7 @@ class MediaModel: ObservableObject {
                     
                 trailers.append(trailer)
             }
-            var filteredTrailers =  trailers.filter( { %0.site == "YouTube" } )
+            var filteredTrailers =  trailers.filter( { $0.site == "YouTube" } )
             
             handler(filteredTrailers)
         }
