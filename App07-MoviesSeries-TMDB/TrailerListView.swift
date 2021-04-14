@@ -17,14 +17,17 @@ struct TrailerListView: View {
     var body: some View {
         VStack {
             List(trailers) { trailer in
-                VStack {
-                    Text(trailer.name)
-                        .font(.Akaya(size: 24))
-                        .foregroundColor(Color("BelizeHole"))
-                    Text(trailer.type)
-                        .font(.Akaya(size: 18))
-                        .foregroundColor(Color("Alizarin"))
-                }
+                NavigationLink(destination: WebView(html: trailer.url),
+                               label: {
+                                VStack(alignment: .leading) {
+                                    Text(trailer.name)
+                                        .font(.Akaya(size: 24))
+                                        .foregroundColor(Color("BelizeHole"))
+                                    Text(trailer.type)
+                                        .font(.Akaya(size: 18))
+                                        .foregroundColor(Color("Alizarin"))
+                                }
+                               })
             }
         }
         .onAppear {
