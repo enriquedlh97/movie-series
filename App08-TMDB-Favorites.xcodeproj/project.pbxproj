@@ -27,6 +27,7 @@
 		32D285ED25F44E2800C6FA97 /* MediaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */; };
 		32D285F025F454DD00C6FA97 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D285EF25F454DC00C6FA97 /* WebView.swift */; };
 		530838F8262387CE007DC49A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530838F7262387CE007DC49A /* Section.swift */; };
+		5371D17B263861B700AB92D1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D17A263861B700AB92D1 /* Persistence.swift */; };
 		537C67792638446E00B1AFBB /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C67782638446E00B1AFBB /* FavoritesView.swift */; };
 		537C677E2638458700B1AFBB /* FavoritesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 537C677C2638458700B1AFBB /* FavoritesModel.xcdatamodeld */; };
 		537C6782263846E800B1AFBB /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C6780263846E800B1AFBB /* Favorites+CoreDataClass.swift */; };
@@ -64,6 +65,7 @@
 		32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailView.swift; sourceTree = "<group>"; };
 		32D285EF25F454DC00C6FA97 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		530838F7262387CE007DC49A /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		5371D17A263861B700AB92D1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		537C67782638446E00B1AFBB /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		537C677D2638458700B1AFBB /* FavoritesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesModel.xcdatamodel; sourceTree = "<group>"; };
 		537C6780263846E800B1AFBB /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -114,6 +116,7 @@
 				53C798C02623446F004FC3D4 /* Genre.swift */,
 				32D285A725F41B8800C6FA97 /* MoviesSeriesView.swift */,
 				537C67782638446E00B1AFBB /* FavoritesView.swift */,
+				5371D17A263861B700AB92D1 /* Persistence.swift */,
 				32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */,
 				32D285EF25F454DC00C6FA97 /* WebView.swift */,
 				32D285D525F42F7200C6FA97 /* MoviesView.swift */,
@@ -267,6 +270,7 @@
 				537C677E2638458700B1AFBB /* FavoritesModel.xcdatamodeld in Sources */,
 				32D285E725F43DC900C6FA97 /* Extensions.swift in Sources */,
 				53BF0A0126252F060046EC42 /* Poster.swift in Sources */,
+				5371D17B263861B700AB92D1 /* Persistence.swift in Sources */,
 				53C798C426234BB2004FC3D4 /* Video.swift in Sources */,
 				32D285C725F4202900C6FA97 /* Enumerators.swift in Sources */,
 				537C6782263846E800B1AFBB /* Favorites+CoreDataClass.swift in Sources */,
