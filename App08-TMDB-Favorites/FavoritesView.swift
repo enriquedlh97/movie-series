@@ -24,7 +24,7 @@ struct FavoritesView: View {
         GeometryReader { geo in
             ZStack {
                 Color("Alizarin")
-                VStack(spacing: 0)  {
+                VStack {
                     VStack {
                         Text("Favorites")
                             .font(.Akaya(size: 48))
@@ -32,6 +32,7 @@ struct FavoritesView: View {
                             .padding(.top,  40)
                     }
                     ScrollView(.vertical, showsIndicators: false) {
+                        VStack(spacing: 0) {
                         ForEach(favorites) { fav in
                             VStack{
                                 FavoriteCellView(fav: fav)
@@ -52,6 +53,7 @@ struct FavoritesView: View {
                                 }
                             }
                         }
+                    }
                     }
                 }
                 // Contains the image for adding data
