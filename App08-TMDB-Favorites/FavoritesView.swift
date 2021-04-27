@@ -35,7 +35,8 @@ struct FavoritesView: View {
                         ForEach(favorites) { fav in
                             VStack {
                                 FavoriteCellView(fav: fav)
-                                    .frame(height: 340)
+                                    .frame(height: 200)
+                                    .padding(.horizontal, 20)
                             }
                             // Adds options to the elements added (allows to delete)
                             .contextMenu {

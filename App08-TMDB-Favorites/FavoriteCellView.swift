@@ -23,17 +23,18 @@ struct FavoriteCellView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(
-                            width: 200,
-                            height: 300)
+                            width: 120,
+                            height: 180)
                         .cornerRadius(40)
                     VStack {
                         Text(fav.title_wrapepd)
                             .font(.Akaya(size: 24))
                             .multilineTextAlignment(.center)
-                        Text("(\(String(fav.release_date_wrapepd))")
+                        Text("(\(String(fav.release_date_wrapepd)))")
                             .font(.Akaya(size: 24))
                             .multilineTextAlignment(.center)
                     }
+                    .foregroundColor(Color("SourLemon"))
                 }
                 
             }
