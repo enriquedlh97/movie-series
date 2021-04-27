@@ -34,9 +34,8 @@ struct FavoritesView: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(favorites) { fav in
                             VStack {
-                                Text(fav.title_wrapepd)
-                                    .font(.Akaya(size: 40))
-                                    .foregroundColor(Color("SourLemon"))
+                                FavoriteCellView(fav: fav)
+                                    .frame(height: 340)
                             }
                             // Adds options to the elements added (allows to delete)
                             .contextMenu {
@@ -82,6 +81,7 @@ struct FavoritesView: View {
             fav.genre_ids.append(Int32(genre))
         }
         fav.poster_path = Video.defaultVideo.poster_path
+        fav.release_date = Video.defaultVideo.release_date
         fav.vote_average = Video.defaultVideo.vote_average
         fav.is_movie = true
         

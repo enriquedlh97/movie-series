@@ -23,8 +23,8 @@ struct FavoriteCellView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(
-                            width: geo.size.width-40,
-                            height: geo.size.height-120)
+                            width: 200,
+                            height: 300)
                         .cornerRadius(40)
                     VStack {
                         Text(fav.title_wrapepd)
@@ -35,6 +35,7 @@ struct FavoriteCellView: View {
                             .multilineTextAlignment(.center)
                     }
                 }
+                
             }
         }
     }
