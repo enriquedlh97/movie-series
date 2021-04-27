@@ -43,7 +43,10 @@ struct FavoritesView: View {
                                 Button {
                                     deleteFromFavorites(fav: fav)
                                 } label: {
-                                    Label("Delete", image: "xmark.circle.fill")
+                                    HStack {
+                                    Text("Delete")
+                                        Image(systemName: "xmark.circle.fill")
+                                }
                                 }
                             }
                         }
