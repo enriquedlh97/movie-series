@@ -39,7 +39,7 @@ struct FavTrailerListView: View {
         .navigationBarColor(UIColor(named: "BelizeHole"))
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text(fav.title_wrapped)
+                Text(fav.title_wrapepd)
                     .font(.Akaya(size: 24))
                     .foregroundColor(Color("Alizarin"))
             }
