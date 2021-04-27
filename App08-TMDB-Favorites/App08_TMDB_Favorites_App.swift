@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct App04_MoviesSeriesApp: App {
+struct App08_TMDB_Favorites_App: App {
     var body: some Scene {
         WindowGroup {
             MoviesSeriesView()

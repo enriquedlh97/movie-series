@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "32D285A125F41B8800C6FA97"
-               BuildableName = "App07-MoviesSeries-TMDB.app"
-               BlueprintName = "App07-MoviesSeries-TMDB"
-               ReferencedContainer = "container:App07-MoviesSeries-TMDB.xcodeproj">
+               BuildableName = "App08-TMDB-Favorites.app"
+               BlueprintName = "App08-TMDB-Favorites"
+               ReferencedContainer = "container:App08-TMDB-Favorites.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "32D285A125F41B8800C6FA97"
-            BuildableName = "App07-MoviesSeries-TMDB.app"
-            BlueprintName = "App07-MoviesSeries-TMDB"
-            ReferencedContainer = "container:App07-MoviesSeries-TMDB.xcodeproj">
+            BuildableName = "App08-TMDB-Favorites.app"
+            BlueprintName = "App08-TMDB-Favorites"
+            ReferencedContainer = "container:App08-TMDB-Favorites.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "32D285A125F41B8800C6FA97"
-            BuildableName = "App07-MoviesSeries-TMDB.app"
-            BlueprintName = "App07-MoviesSeries-TMDB"
-            ReferencedContainer = "container:App07-MoviesSeries-TMDB.xcodeproj">
+            BuildableName = "App08-TMDB-Favorites.app"
+            BlueprintName = "App08-TMDB-Favorites"
+            ReferencedContainer = "container:App08-TMDB-Favorites.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

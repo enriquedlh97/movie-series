@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		329FA61A25F856D4006931F3 /* CedarvilleCursive-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 329FA61925F856D4006931F3 /* CedarvilleCursive-Regular.ttf */; };
-		32D285A625F41B8800C6FA97 /* App04_MoviesSeriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D285A525F41B8800C6FA97 /* App04_MoviesSeriesApp.swift */; };
+		32D285A625F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D285A525F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift */; };
 		32D285A825F41B8800C6FA97 /* MoviesSeriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D285A725F41B8800C6FA97 /* MoviesSeriesView.swift */; };
 		32D285AA25F41B8900C6FA97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D285A925F41B8900C6FA97 /* Assets.xcassets */; };
 		32D285AD25F41B8900C6FA97 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32D285AC25F41B8900C6FA97 /* Preview Assets.xcassets */; };
@@ -39,8 +39,8 @@
 
 /* Begin PBXFileReference section */
 		329FA61925F856D4006931F3 /* CedarvilleCursive-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CedarvilleCursive-Regular.ttf"; sourceTree = "<group>"; };
-		32D285A225F41B8800C6FA97 /* App07-MoviesSeries-TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App07-MoviesSeries-TMDB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32D285A525F41B8800C6FA97 /* App04_MoviesSeriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App04_MoviesSeriesApp.swift; sourceTree = "<group>"; };
+		32D285A225F41B8800C6FA97 /* App08-TMDB-Favorites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App08-TMDB-Favorites.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32D285A525F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App08_TMDB_Favorites_App.swift; sourceTree = "<group>"; };
 		32D285A725F41B8800C6FA97 /* MoviesSeriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSeriesView.swift; sourceTree = "<group>"; };
 		32D285A925F41B8900C6FA97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32D285AC25F41B8900C6FA97 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 		32D2859925F41B8800C6FA97 = {
 			isa = PBXGroup;
 			children = (
-				32D285A425F41B8800C6FA97 /* App07-MoviesSeries-TMDB */,
+				32D285A425F41B8800C6FA97 /* App08-TMDB-Favorites */,
 				32D285A325F41B8800C6FA97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,16 +92,16 @@
 		32D285A325F41B8800C6FA97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32D285A225F41B8800C6FA97 /* App07-MoviesSeries-TMDB.app */,
+				32D285A225F41B8800C6FA97 /* App08-TMDB-Favorites.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		32D285A425F41B8800C6FA97 /* App07-MoviesSeries-TMDB */ = {
+		32D285A425F41B8800C6FA97 /* App08-TMDB-Favorites */ = {
 			isa = PBXGroup;
 			children = (
 				32D285B925F41C4200C6FA97 /* Fonts */,
-				32D285A525F41B8800C6FA97 /* App04_MoviesSeriesApp.swift */,
+				32D285A525F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift */,
 				53C798C02623446F004FC3D4 /* Genre.swift */,
 				32D285A725F41B8800C6FA97 /* MoviesSeriesView.swift */,
 				32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */,
@@ -125,7 +125,7 @@
 				32D285AE25F41B8900C6FA97 /* Info.plist */,
 				32D285AB25F41B8900C6FA97 /* Preview Content */,
 			);
-			path = "App07-MoviesSeries-TMDB";
+			path = "App08-TMDB-Favorites";
 			sourceTree = "<group>";
 		};
 		32D285AB25F41B8900C6FA97 /* Preview Content */ = {
@@ -149,9 +149,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		32D285A125F41B8800C6FA97 /* App07-MoviesSeries-TMDB */ = {
+		32D285A125F41B8800C6FA97 /* App08-TMDB-Favorites */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32D285B125F41B8900C6FA97 /* Build configuration list for PBXNativeTarget "App07-MoviesSeries-TMDB" */;
+			buildConfigurationList = 32D285B125F41B8900C6FA97 /* Build configuration list for PBXNativeTarget "App08-TMDB-Favorites" */;
 			buildPhases = (
 				32D2859E25F41B8800C6FA97 /* Sources */,
 				32D2859F25F41B8800C6FA97 /* Frameworks */,
@@ -161,14 +161,14 @@
 			);
 			dependencies = (
 			);
-			name = "App07-MoviesSeries-TMDB";
+			name = "App08-TMDB-Favorites";
 			packageProductDependencies = (
 				53C798B526234129004FC3D4 /* Alamofire */,
 				53C798B926234150004FC3D4 /* SwiftyJSON */,
 				53C798BD26234172004FC3D4 /* Kingfisher */,
 			);
 			productName = "App04-MoviesSeries";
-			productReference = 32D285A225F41B8800C6FA97 /* App07-MoviesSeries-TMDB.app */;
+			productReference = 32D285A225F41B8800C6FA97 /* App08-TMDB-Favorites.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 32D2859D25F41B8800C6FA97 /* Build configuration list for PBXProject "App07-MoviesSeries-TMDB" */;
+			buildConfigurationList = 32D2859D25F41B8800C6FA97 /* Build configuration list for PBXProject "App08-TMDB-Favorites" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,7 +203,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32D285A125F41B8800C6FA97 /* App07-MoviesSeries-TMDB */,
+				32D285A125F41B8800C6FA97 /* App08-TMDB-Favorites */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +238,7 @@
 				32D285EA25F4468100C6FA97 /* ScoreView.swift in Sources */,
 				32D285CA25F420ED00C6FA97 /* MediaModel.swift in Sources */,
 				32D285ED25F44E2800C6FA97 /* MediaDetailView.swift in Sources */,
-				32D285A625F41B8800C6FA97 /* App04_MoviesSeriesApp.swift in Sources */,
+				32D285A625F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift in Sources */,
 				53C798C12623446F004FC3D4 /* Genre.swift in Sources */,
 				32D285E425F43D9600C6FA97 /* MediaCellView.swift in Sources */,
 				32D285C425F41FDF00C6FA97 /* Media.swift in Sources */,
@@ -376,10 +376,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"App07-MoviesSeries-TMDB/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App08-TMDB-Favorites/Preview Content\"";
 				DEVELOPMENT_TEAM = J97L2A8AMM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "App07-MoviesSeries-TMDB/Info.plist";
+				INFOPLIST_FILE = "App08-TMDB-Favorites/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,10 +398,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"App07-MoviesSeries-TMDB/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"App08-TMDB-Favorites/Preview Content\"";
 				DEVELOPMENT_TEAM = J97L2A8AMM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "App07-MoviesSeries-TMDB/Info.plist";
+				INFOPLIST_FILE = "App08-TMDB-Favorites/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32D2859D25F41B8800C6FA97 /* Build configuration list for PBXProject "App07-MoviesSeries-TMDB" */ = {
+		32D2859D25F41B8800C6FA97 /* Build configuration list for PBXProject "App08-TMDB-Favorites" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32D285AF25F41B8900C6FA97 /* Debug */,
@@ -426,7 +426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32D285B125F41B8900C6FA97 /* Build configuration list for PBXNativeTarget "App07-MoviesSeries-TMDB" */ = {
+		32D285B125F41B8900C6FA97 /* Build configuration list for PBXNativeTarget "App08-TMDB-Favorites" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32D285B225F41B8900C6FA97 /* Debug */,
