@@ -30,6 +30,8 @@
 		5371D17B263861B700AB92D1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D17A263861B700AB92D1 /* Persistence.swift */; };
 		5371D17E26386F0600AB92D1 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D17D26386F0600AB92D1 /* FavoriteCellView.swift */; };
 		5371D181263876CD00AB92D1 /* AddToFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D180263876CD00AB92D1 /* AddToFavoritesView.swift */; };
+		5371D18426387ED700AB92D1 /* FavoritesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D18326387ED700AB92D1 /* FavoritesDetailView.swift */; };
+		5371D1872638808E00AB92D1 /* FavTrailerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D1862638808E00AB92D1 /* FavTrailerListView.swift */; };
 		537C67792638446E00B1AFBB /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C67782638446E00B1AFBB /* FavoritesView.swift */; };
 		537C677E2638458700B1AFBB /* FavoritesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 537C677C2638458700B1AFBB /* FavoritesModel.xcdatamodeld */; };
 		537C6782263846E800B1AFBB /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C6780263846E800B1AFBB /* Favorites+CoreDataClass.swift */; };
@@ -70,6 +72,8 @@
 		5371D17A263861B700AB92D1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5371D17D26386F0600AB92D1 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
 		5371D180263876CD00AB92D1 /* AddToFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoritesView.swift; sourceTree = "<group>"; };
+		5371D18326387ED700AB92D1 /* FavoritesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDetailView.swift; sourceTree = "<group>"; };
+		5371D1862638808E00AB92D1 /* FavTrailerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavTrailerListView.swift; sourceTree = "<group>"; };
 		537C67782638446E00B1AFBB /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		537C677D2638458700B1AFBB /* FavoritesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesModel.xcdatamodel; sourceTree = "<group>"; };
 		537C6780263846E800B1AFBB /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -124,6 +128,8 @@
 				5371D17D26386F0600AB92D1 /* FavoriteCellView.swift */,
 				5371D17A263861B700AB92D1 /* Persistence.swift */,
 				32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */,
+				5371D18326387ED700AB92D1 /* FavoritesDetailView.swift */,
+				5371D1862638808E00AB92D1 /* FavTrailerListView.swift */,
 				32D285EF25F454DC00C6FA97 /* WebView.swift */,
 				32D285D525F42F7200C6FA97 /* MoviesView.swift */,
 				32D285E925F4468100C6FA97 /* ScoreView.swift */,
@@ -264,12 +270,14 @@
 				32D285BE25F41C8500C6FA97 /* Fonts.swift in Sources */,
 				32D285C125F41F7C00C6FA97 /* NavigationBarModifier.swift in Sources */,
 				53CE6E9526279C90000771C7 /* Trailer.swift in Sources */,
+				5371D1872638808E00AB92D1 /* FavTrailerListView.swift in Sources */,
 				537C6783263846E800B1AFBB /* Favorites+CoreDataProperties.swift in Sources */,
 				32D285EA25F4468100C6FA97 /* ScoreView.swift in Sources */,
 				32D285CA25F420ED00C6FA97 /* MediaModel.swift in Sources */,
 				32D285ED25F44E2800C6FA97 /* MediaDetailView.swift in Sources */,
 				32D285A625F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift in Sources */,
 				5371D181263876CD00AB92D1 /* AddToFavoritesView.swift in Sources */,
+				5371D18426387ED700AB92D1 /* FavoritesDetailView.swift in Sources */,
 				537C67792638446E00B1AFBB /* FavoritesView.swift in Sources */,
 				53C798C12623446F004FC3D4 /* Genre.swift in Sources */,
 				32D285E425F43D9600C6FA97 /* MediaCellView.swift in Sources */,

@@ -33,27 +33,30 @@ struct FavoritesView: View {
                     }
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(spacing: 0) {
-                        ForEach(favorites) { fav in
-                            VStack{
-                                FavoriteCellView(fav: fav)
-                                    .frame(height: 200)
-                                    .padding(.horizontal, 20)
-                            }
-                            .background(                           Color(fav.is_movie ? "BelizeHole" : "GreenSea")
-                            )
-                            // Adds options to the elements added (allows to delete)
-                            .contextMenu {
-                                Button {
-                                    deleteFromFavorites(fav: fav)
-                                } label: {
-                                    HStack {
-                                        Text("Delete")
-                                        Image(systemName: "xmark.circle.fill")
+                            ForEach(favorites) { fav in
+                                VStack{
+                                    NavigationLink(
+                                        destination: FavoritesDetailView(),
+                                        label: FavoriteCellView(fav: fav)
+                                            .frame(height: 200)
+                                            .padding(.horizontal, 20))
+                                    
+                                }
+                                .background(                           Color(fav.is_movie ? "BelizeHole" : "GreenSea")
+                                )
+                                // Adds options to the elements added (allows to delete)
+                                .contextMenu {
+                                    Button {
+                                        deleteFromFavorites(fav: fav)
+                                    } label: {
+                                        HStack {
+                                            Text("Delete")
+                                            Image(systemName: "xmark.circle.fill")
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
                     }
                 }
                 // Contains the image for adding data
