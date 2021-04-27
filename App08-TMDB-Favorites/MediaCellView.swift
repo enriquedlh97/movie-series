@@ -38,7 +38,18 @@ struct MediaCellView: View {
                                         .padding(.leading,40)
                                         .padding(.bottom,-35)
                                     }
+                                    // Adds start for favorites fucnionality on top of element image
+                                    VStack {
+                                        HStack {
+                                            Spacer()
+                                            AddToFavoritesView(video: media, isMovie: true)
+                                                .padding(.trailing, 20)
+                                                .padding(.top, 20)
+                                        }
+                                        Spacer()
+                                    }
                                 }
+                                
                                 
                             )
                             .padding(.horizontal,20)
