@@ -38,6 +38,8 @@ struct FavoritesView: View {
                                     .frame(height: 200)
                                     .padding(.horizontal, 20)
                             }
+                            .background(                           Color("BelizeHole")
+                            )
                             // Adds options to the elements added (allows to delete)
                             .contextMenu {
                                 Button {
