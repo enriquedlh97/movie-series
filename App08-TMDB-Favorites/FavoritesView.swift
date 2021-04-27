@@ -24,7 +24,7 @@ struct FavoritesView: View {
         GeometryReader { geo in
             ZStack {
                 Color("Alizarin")
-                VStack {
+                VStack(spacing: 0)  {
                     VStack {
                         Text("Favorites")
                             .font(.Akaya(size: 48))
@@ -33,12 +33,12 @@ struct FavoritesView: View {
                     }
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(favorites) { fav in
-                            VStack {
+                            VStack{
                                 FavoriteCellView(fav: fav)
                                     .frame(height: 200)
                                     .padding(.horizontal, 20)
                             }
-                            .background(                           Color("BelizeHole")
+                            .background(                           Color(fav.is_movie ? "BelizeHole" : "GreenSea")
                             )
                             // Adds options to the elements added (allows to delete)
                             .contextMenu {

@@ -41,6 +41,7 @@ struct FavoriteCellView: View {
                     }
                     .foregroundColor(Color("SourLemon"))
                 }
+                .padding(.vertical, 10)
                 
             }
         }
