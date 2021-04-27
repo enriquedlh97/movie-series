@@ -34,6 +34,8 @@ struct FavoritesView: View {
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(favorites) { fav in
                             Text(fav.title_wrapepd)
+                                .font(.Akaya(size: 40))
+                                .foregroundColor(Color("SourLemon"))
                         }
                     }
                 }
