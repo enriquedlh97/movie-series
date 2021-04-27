@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct App08_TMDB_Favorites_App: App {
+    
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
             MoviesSeriesView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
