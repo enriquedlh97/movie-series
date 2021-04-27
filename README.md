@@ -2,13 +2,13 @@
 App for viewing a catalogue of movies and series, as well as their images, trailers, movies currently available in streaming services and more functionalities like adding to favorites, etc.
 
 <p align="center">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.54.18.png" width="150">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.54.38.png" width="150">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.54.55.png" width="150">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.55.27.png" width="150">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.55.46.png" width="150">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.57.13.png" width="150">
-  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.57.46.png" width="150">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.54.18.png" width="140">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.54.38.png" width="140">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.54.55.png" width="140">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.55.27.png" width="140">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.55.46.png" width="140">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.57.13.png" width="140">
+  <img src="https://github.com/enriquedlh97/movie-series/blob/main/screenshots/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-04-27%20at%2010.57.46.png" width="140">
 
 
 ## Dependencies
