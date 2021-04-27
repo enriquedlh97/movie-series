@@ -78,7 +78,7 @@ struct FavoritesDetailView: View {
                 }
             }
             .onAppear {
-                videos.LoadImages(id: Int(fav.id), isMovie: fav.isMovie) { (returnedPosters) in
+                videos.LoadImages(id: Int(fav.id), isMovie: fav.is_movie) { (returnedPosters) in
                     posters.append(contentsOf: returnedPosters)
                 }
             }

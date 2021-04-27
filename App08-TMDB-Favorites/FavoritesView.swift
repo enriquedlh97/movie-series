@@ -36,10 +36,10 @@ struct FavoritesView: View {
                             ForEach(favorites) { fav in
                                 VStack{
                                     NavigationLink(
-                                        destination: FavoritesDetailView(),
-                                        label: FavoriteCellView(fav: fav)
+                                        destination: FavoritesDetailView(videos: media, fav: fav),
+                                        label: {FavoriteCellView(fav: fav)
                                             .frame(height: 200)
-                                            .padding(.horizontal, 20))
+                                            .padding(.horizontal, 20)})
                                     
                                 }
                                 .background(                           Color(fav.is_movie ? "BelizeHole" : "GreenSea")

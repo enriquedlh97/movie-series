@@ -8,13 +8,47 @@
 import SwiftUI
 
 struct FavTrailerListView: View {
+    
+    @StateObject var videos: MediaModel
+    var fav: Favorites
+    @State var trailers = [Trailer]()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            List(trailers) { trailer in
+                NavigationLink(destination: WebView(html: trailer.url),
+                               label: {
+                                VStack(alignment: .leading) {
+                                    Text(trailer.name)
+                                        .font(.Akaya(size: 24))
+                                        .foregroundColor(Color("BelizeHole"))
+                                    Text(trailer.type)
+                                        .font(.Akaya(size: 18))
+                                        .foregroundColor(Color("Alizarin"))
+                                }
+                               })
+            }
+        }
+        .onAppear {
+            videos.LoadVideos(id: Int(fav.id), isMovie: fav.is_movie) { (returnedTrailers) in
+                trailers.removeAll()
+                trailers.append(contentsOf: returnedTrailers)
+            }
+        }
+        .navigationBarTitle(fav.title_wrapepd, displayMode: .inline)
+        .navigationBarColor(UIColor(named: "BelizeHole"))
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(fav.title_wrapped)
+                    .font(.Akaya(size: 24))
+                    .foregroundColor(Color("Alizarin"))
+            }
+        }
     }
 }
 
 struct FavTrailerListView_Previews: PreviewProvider {
     static var previews: some View {
-        FavTrailerListView()
+        FavTrailerListView(videos: MediaModel(), fav: Favorites())
     }
 }
