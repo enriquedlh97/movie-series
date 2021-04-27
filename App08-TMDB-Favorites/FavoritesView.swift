@@ -33,16 +33,18 @@ struct FavoritesView: View {
                     }
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(favorites) { fav in
-                            Text(fav.title_wrapepd)
-                                .font(.Akaya(size: 40))
-                                .foregroundColor(Color("SourLemon"))
-                        }
-                        // Adds options to the elements added (allows to delete)
-                        .contextMenu {
-                            Button {
-                                DeleteFromFavorites(fav)
-                            } label: {
-                                Label("Delete", image: "xmark.circle.fill")
+                            VStack {
+                                Text(fav.title_wrapepd)
+                                    .font(.Akaya(size: 40))
+                                    .foregroundColor(Color("SourLemon"))
+                            }
+                            // Adds options to the elements added (allows to delete)
+                            .contextMenu {
+                                Button {
+                                    deleteFromFavorites(fav: fav)
+                                } label: {
+                                    Label("Delete", image: "xmark.circle.fill")
+                                }
                             }
                         }
                     }
@@ -84,6 +86,15 @@ struct FavoritesView: View {
         try? viewContext.save()
         
     }
+    
+    func deleteFromFavorites(fav: Favorites) {
+        // The recieved fav is deleted from the DB
+        
+        viewContext.delete(fav)
+        try? viewContext.save()
+        
+    }
+    
 }
 
 struct FavoritesView_Previews: PreviewProvider {
