@@ -52,7 +52,7 @@ struct SeriesView: View {
                                     NavigationLink(
                                         destination: MediaDetailView(videos: media, media: serie, isMovie: false),
                                         label: {
-                                            MediaCellView(media: serie)
+                                            MediaCellView(media: serie, isMovie: false)
                                                 .frame(width: geo.size.width)
                                         })
                                 }

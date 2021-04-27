@@ -11,6 +11,7 @@ import Kingfisher
 struct MediaCellView: View {
     
     var media: Video
+    var isMovie: Bool
     
     var body: some View {
         GeometryReader { geo in
@@ -42,7 +43,7 @@ struct MediaCellView: View {
                                     VStack {
                                         HStack {
                                             Spacer()
-                                            AddToFavoritesView(video: media, isMovie: true)
+                                            AddToFavoritesView(video: media, isMovie: isMovie)
                                                 .padding(.trailing, 20)
                                                 .padding(.top, 20)
                                         }
@@ -77,6 +78,6 @@ struct MediaCellView: View {
 
 struct MediaCellView_Previews: PreviewProvider {
     static var previews: some View {
-        MediaCellView(media: Video.defaultVideo)
+        MediaCellView(media: Video.defaultVideo, isMovie: true)
     }
 }

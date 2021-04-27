@@ -50,7 +50,7 @@ struct MoviesView: View {
                                     NavigationLink(
                                         destination: MediaDetailView(videos: media, media: movie, isMovie: true),
                                         label: {
-                                            MediaCellView(media: movie)
+                                            MediaCellView(media: movie, isMovie: true)
                                                 .frame(width: geo.size.width)
                                         })
                                 }
