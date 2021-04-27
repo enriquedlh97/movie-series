@@ -22,6 +22,10 @@ struct MoviesSeriesView: View {
                     .tabItem {
                         Label("Series", systemImage: "play.tv.fill")
                     }
+                FavoritesView(media: media)
+                    .tabItem {
+                        Label("Favorites", systemImage: "star.fill")
+                    }
             }
         }
         .accentColor(Color("Alizarin"))
