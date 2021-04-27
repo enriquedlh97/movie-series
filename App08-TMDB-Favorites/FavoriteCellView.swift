@@ -25,7 +25,12 @@ struct FavoriteCellView: View {
                         .frame(
                             width: 120,
                             height: 180)
-                        .cornerRadius(40)
+                        .cornerRadius(20)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color("SourLemon"),
+                                    style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                        )
                     VStack {
                         Text(fav.title_wrapepd)
                             .font(.Akaya(size: 24))
