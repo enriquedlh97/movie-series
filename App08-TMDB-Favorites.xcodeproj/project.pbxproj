@@ -29,6 +29,7 @@
 		530838F8262387CE007DC49A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530838F7262387CE007DC49A /* Section.swift */; };
 		5371D17B263861B700AB92D1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D17A263861B700AB92D1 /* Persistence.swift */; };
 		5371D17E26386F0600AB92D1 /* FavoriteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D17D26386F0600AB92D1 /* FavoriteCellView.swift */; };
+		5371D181263876CD00AB92D1 /* AddToFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371D180263876CD00AB92D1 /* AddToFavoritesView.swift */; };
 		537C67792638446E00B1AFBB /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C67782638446E00B1AFBB /* FavoritesView.swift */; };
 		537C677E2638458700B1AFBB /* FavoritesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 537C677C2638458700B1AFBB /* FavoritesModel.xcdatamodeld */; };
 		537C6782263846E800B1AFBB /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C6780263846E800B1AFBB /* Favorites+CoreDataClass.swift */; };
@@ -68,6 +69,7 @@
 		530838F7262387CE007DC49A /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		5371D17A263861B700AB92D1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5371D17D26386F0600AB92D1 /* FavoriteCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCellView.swift; sourceTree = "<group>"; };
+		5371D180263876CD00AB92D1 /* AddToFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavoritesView.swift; sourceTree = "<group>"; };
 		537C67782638446E00B1AFBB /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		537C677D2638458700B1AFBB /* FavoritesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoritesModel.xcdatamodel; sourceTree = "<group>"; };
 		537C6780263846E800B1AFBB /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorites+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -118,6 +120,7 @@
 				53C798C02623446F004FC3D4 /* Genre.swift */,
 				32D285A725F41B8800C6FA97 /* MoviesSeriesView.swift */,
 				537C67782638446E00B1AFBB /* FavoritesView.swift */,
+				5371D180263876CD00AB92D1 /* AddToFavoritesView.swift */,
 				5371D17D26386F0600AB92D1 /* FavoriteCellView.swift */,
 				5371D17A263861B700AB92D1 /* Persistence.swift */,
 				32D285EC25F44E2800C6FA97 /* MediaDetailView.swift */,
@@ -266,6 +269,7 @@
 				32D285CA25F420ED00C6FA97 /* MediaModel.swift in Sources */,
 				32D285ED25F44E2800C6FA97 /* MediaDetailView.swift in Sources */,
 				32D285A625F41B8800C6FA97 /* App08_TMDB_Favorites_App.swift in Sources */,
+				5371D181263876CD00AB92D1 /* AddToFavoritesView.swift in Sources */,
 				537C67792638446E00B1AFBB /* FavoritesView.swift in Sources */,
 				53C798C12623446F004FC3D4 /* Genre.swift in Sources */,
 				32D285E425F43D9600C6FA97 /* MediaCellView.swift in Sources */,
