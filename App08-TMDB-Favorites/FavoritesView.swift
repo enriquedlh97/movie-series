@@ -59,18 +59,18 @@ struct FavoritesView: View {
                         }
                     }
                 }
-                // Contains the image for adding data
-                VStack {
-                    Spacer()
-                    Button {
-                        saveToFavorites()
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(Color("BelizeHole"))
-                    }
-                }
-                .padding(.bottom, 100)
+//                // Contains the image for adding data
+//                VStack {
+//                    Spacer()
+//                    Button {
+//                        saveToFavorites()
+//                    } label: {
+//                        Image(systemName: "plus.circle.fill")
+//                            .font(.largeTitle)
+//                            .foregroundColor(Color("BelizeHole"))
+//                    }
+//                }
+//                .padding(.bottom, 100)
             }
             .edgesIgnoringSafeArea(.all)
             

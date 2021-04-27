@@ -31,6 +31,7 @@ struct FavoriteCellView: View {
                             .stroke(Color("SourLemon"),
                                     style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
                         )
+                    Spacer()
                     VStack {
                         Text(fav.title_wrapepd)
                             .font(.Akaya(size: 24))
@@ -38,8 +39,11 @@ struct FavoriteCellView: View {
                         Text("(\(String(fav.release_date_wrapepd)))")
                             .font(.Akaya(size: 24))
                             .multilineTextAlignment(.center)
+                        ScoreView(score: fav.vote_average * 10)
+                            .scaleEffect(0.75)
                     }
                     .foregroundColor(Color("SourLemon"))
+                    Spacer()
                 }
                 .padding(.vertical, 10)
                 
