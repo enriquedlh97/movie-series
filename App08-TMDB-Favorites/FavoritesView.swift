@@ -37,6 +37,14 @@ struct FavoritesView: View {
                                 .font(.Akaya(size: 40))
                                 .foregroundColor(Color("SourLemon"))
                         }
+                        // Adds options to the elements added (allows to delete)
+                        .contextMenu {
+                            Button {
+                                DeleteFromFavorites(fav)
+                            } label: {
+                                Label("Delete", image: "xmark.circle.fill")
+                            }
+                        }
                     }
                 }
                 // Contains the image for adding data
