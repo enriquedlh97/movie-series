@@ -21,11 +21,20 @@ struct FavoritesView: View {
     var favorites: FetchedResults<Favorites>
     
     var body: some View {
-        VStack {
+        GeometryReader { geo in
             ZStack {
-                ScrollView(.vertical, showsIndicators: false) {
-                    ForEach(favorites) { fav in
-                        Text(fav.title_wrapepd)
+                Color("Alizarin")
+                VStack {
+                    VStack {
+                        Text("Favorites")
+                            .font(.Akaya(size: 48))
+                            .foregroundColor(Color("SourLemon"))
+                            .padding(.top,  40)
+                    }
+                    ScrollView(.vertical, showsIndicators: false) {
+                        ForEach(favorites) { fav in
+                            Text(fav.title_wrapepd)
+                        }
                     }
                 }
                 // Contains the image for adding data
@@ -39,8 +48,12 @@ struct FavoritesView: View {
                             .foregroundColor(Color("BelizeHole"))
                     }
                 }
+                .padding(.bottom, 100)
             }
+            .edgesIgnoringSafeArea(.all)
+            
         }
+        
     }
     
     func saveToFavorites() {
